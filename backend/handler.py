@@ -1,9 +1,9 @@
 import json
 
 
-def hello(event, context):
+def ping(event, context):
     body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
+        "message": "Pong!",
         "input": event
     }
 
@@ -18,7 +18,7 @@ def hello(event, context):
     # integration
     """
     return {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
+        "message": "Pong!",
         "event": event
     }
     """
