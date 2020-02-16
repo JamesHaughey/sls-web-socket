@@ -1,7 +1,11 @@
 import json
+import logging
 
+logger = logging.getLogger("handler_logger")
+logger.setLevel(logging.DEBUG)
 
 def ping(event, context):
+    logger.info("Ping requested.")
     body = {
         "message": "Pong!",
         "input": event
@@ -13,12 +17,3 @@ def ping(event, context):
     }
 
     return response
-
-    # Use this code if you don't use the http event with the LAMBDA-PROXY
-    # integration
-    """
-    return {
-        "message": "Pong!",
-        "event": event
-    }
-    """
