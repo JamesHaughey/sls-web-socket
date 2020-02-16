@@ -113,3 +113,6 @@ resources:
           - 
             AttributeName: Index
             KeyType: RANGE
+
+plugins:
+  - serverless-python-requirements
